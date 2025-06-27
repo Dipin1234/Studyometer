@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.form-container, .session-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    padding: 12px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: #6c5ce7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a4bc6;
+}
+
+.progress-container {
+    margin: 20px 0;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.progress-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.progress-item h3 {
+    margin: 0 0 10px;
+    color: #2c3e50;
+}
+
+.progress-meter {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.progress-meter svg {
+    transform: rotate(-90deg);
+}
+
+.progress-meter .progress-circle {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10;
+}
+
+.progress-meter .progress-fill {
+    fill: none;
+    stroke: #6c5ce7;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.progress-meter .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.progress-item button {
+    margin: 10px 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.progress-item button.reset {
+    background: #e74c3c;
+}
+
+.progress-item button.reset:hover {
+    background: #c0392b;
+}
+
+.progress-item button.remove {
+    background: #95a5a6;
+}
+
+.progress-item button.remove:hover {
+    background: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+
+    input, select, button {
+        width: calc(100% - 16px);
+        margin: 8px 0;
+    }
+}
