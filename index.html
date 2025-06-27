@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studyometer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Planner</h1>
+        
+        <!-- Add Subject Form -->
+        <div class="form-container">
+            <h2>Add Subject</h2>
+            <input type="text" id="subjectName" placeholder="Subject Name (e.g., Physics)">
+            <input type="number" id="subjectHours" placeholder="Hours Allotted" min="1">
+            <button onclick="addSubject()">Add Subject</button>
+        </div>
+        
+        <!-- Study Session Controls -->
+        <div class="session-container">
+            <h2>Start/Stop Study Session</h2>
+            <select id="subjectSelect"></select>
+            <button onclick="startSession()">Start Session</button>
+            <button onclick="stopSession()">Stop Session</button>
+        </div>
+        
+        <!-- Progress Dashboard -->
+        <div class="progress-container">
+            <h2>Your Progress</h2>
+            <div id="progressList" class="progress-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
